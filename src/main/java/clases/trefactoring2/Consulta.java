@@ -1,12 +1,9 @@
 package clases.trefactoring2;
 
 import java.util.List;
-
+import java.time.*;
 public class Consulta {
-    public int dia;
-    public int mes;
-    public int año;
-    private String hora;
+    public LocalDateTime fecha;
     private Paciente paciente;
     private Medico medico;
     private ServicioMedico servicioMedico;
@@ -15,24 +12,14 @@ public class Consulta {
     private String tratamiento;
     private List<String> examenesMedicos;
 
-    public Consulta(int dia, int mes, int año, String hora, Paciente paciente, Medico medico, ServicioMedico servicioMedico, String diagnostico, String tratamiento, List<String> examenesMedicos) {
-        this.dia = dia;
-        this.mes = mes;
-        this.año = año;
-        this.hora = hora;
+    public Consulta(LocalDateTime fecha, Paciente paciente, Medico medico, ServicioMedico servicioMedico, String diagnostico, String tratamiento, List<String> examenesMedicos) {
+        this.fecha=fecha;
         this.servicioMedico = servicioMedico;
         this.paciente = paciente;
         this.medico = medico;
         this.realizada = false;
     }
 
-    public String getHora() {
-        return hora;
-    }
-
-    public void setHora(String hora) {
-        this.hora = hora;
-    }
 
     public Paciente getPaciente() {
         return paciente;
