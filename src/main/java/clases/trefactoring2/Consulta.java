@@ -3,7 +3,7 @@ package clases.trefactoring2;
 import java.util.List;
 import java.time.*;
 public class Consulta {
-    public LocalDateTime fecha;
+    private LocalDateTime fecha;
     private Paciente paciente;
     private Medico medico;
     private ServicioMedico servicioMedico;
