@@ -1,6 +1,7 @@
 package clases.trefactoring2;
 
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.List;
 
 public class RecetaMedica {
@@ -43,12 +44,20 @@ public class RecetaMedica {
     public void setMedico(Medico medico) {
         this.medico = medico;
     }
-
-    public List<String> getMedicamentos() {
-        return medicamentos;
+    
+    public String getMedicamento(int i){
+        return medicamentos.get(i);
+    }
+    
+    public void addMedicamenteo(String medicamento){
+        this.medicamentos.add(medicamento);
     }
 
-    public void setMedicamentos(List<String> medicamentos) {
-        this.medicamentos = medicamentos;
+    public void removeMedicamento(String medicamento){
+        this.medicamentos.remove(medicamento);
+    }    
+    
+    public List<String> getMedicamentos() {
+        return Collections.unmodifiableList(medicamentos);
     }
 }
