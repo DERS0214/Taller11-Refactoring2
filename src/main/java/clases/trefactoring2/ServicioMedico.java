@@ -47,7 +47,10 @@ public class ServicioMedico {
     }
 
     public void setDuracion(int duracion) {
-
+        if(duracion<0){
+            System.out.println("La duración no puede ser menor a 0");
+            return;
+        }
         this.duracion = duracion;
     }
 }

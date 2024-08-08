@@ -4,11 +4,11 @@ public class Persona {
     private String nombre;
     private int edad;
     private String genero;
-    private String direccion;
+    private Direccion direccion;
     private String telefono;
     private String correoElectronico;
 
-    public Persona(String nombre, int edad, String genero, String direccion, String telefono, String correoElectronico) {
+    public Persona(String nombre, int edad, String genero, Direccion direccion, String telefono, String correoElectronico) {
         this.nombre = nombre;
         this.edad = edad;
         this.genero = genero;
@@ -41,11 +41,11 @@ public class Persona {
         this.genero = genero;
     }
 
-    public String getDireccion() {
+    public Direccion getDireccion() {
         return direccion;
     }
 
-    public void setDireccion(String direccion) {
+    public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
 

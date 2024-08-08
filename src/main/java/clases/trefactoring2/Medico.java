@@ -2,7 +2,7 @@ package clases.trefactoring2;
 
 public class Medico extends Persona {
 
-    public Medico(String nombre, int edad, String genero, String direccion, String telefono, String correoElectronico) {
+    public Medico(String nombre, int edad, String genero, Direccion direccion, String telefono, String correoElectronico) {
         super(nombre, edad, genero, direccion, telefono, correoElectronico);
     }
 
