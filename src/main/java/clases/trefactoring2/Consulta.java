@@ -2,6 +2,7 @@ package clases.trefactoring2;
 
 import java.util.List;
 import java.time.*;
+import java.util.Collections;
 public class Consulta {
     private LocalDateTime fecha;
     private Paciente paciente;
@@ -28,7 +29,6 @@ public class Consulta {
         this.fecha = fecha;
     }
 
-    
     public Paciente getPaciente() {
         return paciente;
     }
@@ -70,11 +70,15 @@ public class Consulta {
     }
 
     public List<String> getExamenesMedicos() {
-        return examenesMedicos;
+        return  Collections.unmodifiableList(examenesMedicos);
     }
 
-    public void setExamenesMedicos(List<String> examenesMedicos) {
-        this.examenesMedicos = examenesMedicos;
+    public void addExamenesMedicos(String examenMedico) {
+        this.examenesMedicos.add(examenMedico);
+    }
+    
+    public void removeExamenesMedicos(String examenMedico) {
+        this.examenesMedicos.remove(examenMedico);
     }
 
     public ServicioMedico getServicioMedico() {
