@@ -20,7 +20,15 @@ public class Consulta {
         this.realizada = false;
     }
 
+    public LocalDateTime getFecha() {
+        return fecha;
+    }
 
+    public void setFecha(LocalDateTime fecha) {
+        this.fecha = fecha;
+    }
+
+    
     public Paciente getPaciente() {
         return paciente;
     }
